@@ -42,7 +42,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 1000
@@ -58,7 +58,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: '[3]'
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
@@ -297,7 +297,7 @@ InputManager:
     m_Name: PlayerOneMovement
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
+    negativeButton: a
     positiveButton: q
     altNegativeButton: 
     altPositiveButton: joystick button 1
@@ -313,8 +313,8 @@ InputManager:
     m_Name: PlayerTwoMovement
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: m
-    positiveButton: j
+    negativeButton: '[3]'
+    positiveButton: '[6]'
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000
