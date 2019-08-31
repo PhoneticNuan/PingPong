@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\SelectManager.cs" />
     <Compile Include="Assets\Scripts\Brick.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\ParticleDestroy.cs" />
     <Compile Include="Assets\Scripts\UIButton.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Admin/Downloads/PingPong/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

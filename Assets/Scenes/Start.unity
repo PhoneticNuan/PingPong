@@ -810,49 +810,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1601332787789131645, guid: 0c38816174027b24a8b760b9d84ab9eb,
-        type: 3}
-      propertyPath: score
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1601332787789131645, guid: 0c38816174027b24a8b760b9d84ab9eb,
-        type: 3}
-      propertyPath: playerHitScore
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c38816174027b24a8b760b9d84ab9eb, type: 3}
---- !u!1 &8019742097265215455 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8019742095544799300, guid: 0c38816174027b24a8b760b9d84ab9eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 8019742097265215454}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8019742097265215456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8019742097265215455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a817936d5c160de44a37229d3cfa5c22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  balls:
-  - pooledObject: {fileID: 567296147823178337, guid: 3611a2773214a4549825d1a5fef8ce8e,
-      type: 3}
-    poolParent: {fileID: 0}
-    pooledAmount: 20
-    IsGrow: 0
-  - pooledObject: {fileID: 4773853426379829404, guid: 538df61331353b041a899ec03d28cbb9,
-      type: 3}
-    poolParent: {fileID: 0}
-    pooledAmount: 20
-    IsGrow: 0
-  - pooledObject: {fileID: 447854113009917428, guid: e3720b4ee6dbe764aae6a1562002d615,
-      type: 3}
-    poolParent: {fileID: 0}
-    pooledAmount: 20
-    IsGrow: 0

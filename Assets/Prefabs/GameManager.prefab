@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8019742095544799301}
   - component: {fileID: 1601332787789131645}
+  - component: {fileID: 8019742097265215456}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: CharacterSelect
   playerScore: 
-  score: 0
-  playerHitScore: 0
+  score: 100
+  playerHitScore: 1000
   player1Text: {fileID: 0}
   player2Text: {fileID: 0}
   players:
@@ -54,3 +55,31 @@ MonoBehaviour:
   - {fileID: 7756671920881985485, guid: ca7ef685db95c974ab52bc09798ebd37, type: 3}
   player1: 0
   player2: 0
+--- !u!114 &8019742097265215456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019742095544799300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a817936d5c160de44a37229d3cfa5c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balls:
+  - pooledObject: {fileID: 567296147823178337, guid: 3611a2773214a4549825d1a5fef8ce8e,
+      type: 3}
+    poolParent: {fileID: 0}
+    pooledAmount: 20
+    IsGrow: 1
+  - pooledObject: {fileID: 4773853426379829404, guid: 538df61331353b041a899ec03d28cbb9,
+      type: 3}
+    poolParent: {fileID: 0}
+    pooledAmount: 20
+    IsGrow: 1
+  - pooledObject: {fileID: 447854113009917428, guid: e3720b4ee6dbe764aae6a1562002d615,
+      type: 3}
+    poolParent: {fileID: 0}
+    pooledAmount: 20
+    IsGrow: 1

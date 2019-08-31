@@ -13,6 +13,8 @@ public class Paintball : MonoBehaviour, IObjectPoolAble {
     private bool bAddForce;
     bool bShoot;
 
+    public GameObject hit;
+
     void Awake ( ) {
         this.tf = this.gameObject.transform;
         this.rb = GetComponent<Rigidbody2D> ( );
@@ -65,11 +67,14 @@ public class Paintball : MonoBehaviour, IObjectPoolAble {
         if (other.gameObject.tag == "Player1")
         {
             GameManager.Instance.AddScore(1);
+            Instantiate(hit, other.transform);
             Recycle();
+
         }
         else if (other.gameObject.tag == "Player2")
         {
             GameManager.Instance.AddScore(0);
+            Instantiate(hit, other.transform);
             Recycle();
         }
     }
