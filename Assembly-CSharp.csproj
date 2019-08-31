@@ -66,16 +66,16 @@
     <Compile Include="Assets\Eccentric\Collections\ObjectPool.cs" />
     <Compile Include="Assets\Eccentric\Utils\Timer.cs" />
     <Compile Include="Assets\Eccentric\Utils\TSingletonMonoBehavior.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Paintball.cs" />
     <Compile Include="Assets\Script\PaintballPool.cs" />
+    <Compile Include="Assets\Script\PlayerProps.cs" />
     <Compile Include="Assets\Script\PlayerShooting.cs" />
     <Compile Include="Assets\Script\ResultManager.cs" />
+    <Compile Include="Assets\Script\SelectManager.cs" />
     <Compile Include="Assets\Scripts\Brick.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\CharacterSelector.cs" />
-    <Compile Include="Assets\Scripts\CharacterState.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\TestBullet.cs" />
+    <Compile Include="Assets\Scripts\UIButton.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Admin/Downloads/PingPong/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

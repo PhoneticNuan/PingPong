@@ -1,24 +1,23 @@
 using Eccentric.Utils;
 
 using UnityEngine;
-public class PlayerShooting : MonoBehaviour
-{
-    [Header("Setting")]
+public class PlayerShooting : MonoBehaviour {
+    [Header ("Setting")]
     public Transform shootPos;
     public string shootInput;
-    [Header("Setting OtherClass")]
+    [Header ("Setting OtherClass")]
     [SerializeField] float shootCD;
     [SerializeField] float ballDuration;
     [SerializeField] float shootSpeed;
-    [Header("Monitoring")]
+    [Header ("Monitoring")]
 
     [SerializeField] PaintballValue ballValue;
     [SerializeField] int nextColor;
     Paintball ball;
     #region ROTATION
-    [Header("Rotate")]
+    [Header ("Rotate")]
     [SerializeField] float rotateSpeed;
-    [SerializeField] float rotateStartValue;
+    public float rotateStartValue;
     #endregion
 
     CountdownTimer timer;
@@ -27,44 +26,41 @@ public class PlayerShooting : MonoBehaviour
     public float ShootCD { get { return shootCD; } set { shootCD = value; } }
     public float ShootSpeed { get { return shootSpeed; } set { shootSpeed = value; } }
     public int NextColor { get { return nextColor; } }
-    void Start()
-    {
-        timer = new CountdownTimer(shootCD);
-        InitShoot();
+    void Start ( ) {
+        timer = new CountdownTimer (shootCD);
+        nextColor = Random.Range (0, 3);
+        InitShoot ( );
     }
-    void Update()
-    {
-        Rotate();
-        if (timer.IsFinished && Input.GetButtonDown(shootInput))
-        {
-            Shoot();
+    void Update ( ) {
+        Rotate ( );
+        if (timer.IsFinished && Input.GetButtonDown (shootInput)) {
+            Shoot ( );
         }
     }
 
-    void Rotate()
-    {
-        float tmp = Mathf.PingPong(Time.time * rotateSpeed, 100f) + rotateStartValue;
-        this.transform.rotation = Quaternion.Euler(0f, 0f, tmp);
+    void Rotate ( ) {
+        float tmp = Mathf.PingPong (Time.time * rotateSpeed, 100f) + rotateStartValue;
+        this.transform.rotation = Quaternion.Euler (0f, 0f, tmp);
     }
 
-    void Shoot()
-    {
+    void Shoot ( ) {
         Vector2 direction = shootPos.position - this.transform.position;
         ballValue.force = direction.normalized * this.shootSpeed;
-        ball.Shoot(ballValue);
-        InitShoot();
+        ball.Shoot (ballValue);
+        InitShoot ( );
     }
 
     //ask for a bullet
-    void InitShoot()
-    {
-        timer.Reset();
-        nextColor = Random.Range(0, 3);
+    void InitShoot ( ) {
+        timer.Reset ( );
+        int currentColor = nextColor;
+        nextColor = Random.Range (0, 4);
+        if (nextColor == 3) nextColor = currentColor;
         ballValue.tag = this.gameObject.tag + "Ball";
         ballValue.position = this.shootPos.position;
         ballValue.duration = this.ballDuration;
         ballValue.parent = this.transform;
-        ball = PaintballPool.Instance.balls[nextColor].GetPooledObject(ballValue) as Paintball;
+        ball = PaintballPool.Instance.balls [nextColor].GetPooledObject (ballValue) as Paintball;
     }
 
 }

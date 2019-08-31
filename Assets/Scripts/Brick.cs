@@ -19,12 +19,12 @@ public class Brick : MonoBehaviour
             {
                 if (collision.gameObject.tag == "Player1Ball")
                 {
-                    ScoreManager.Instance.AddScore(0, 1);
+                    GameManager.Instance.AddScore(0, 1);
                     Destroy(gameObject);
                 }
                 else if (collision.gameObject.tag == "Player2Ball")
                 {
-                    ScoreManager.Instance.AddScore(1, 1);
+                    GameManager.Instance.AddScore(1, 1);
                     Destroy(gameObject);
                 }
             }
