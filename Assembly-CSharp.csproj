@@ -69,6 +69,7 @@
     <Compile Include="Assets\Script\Paintball.cs" />
     <Compile Include="Assets\Script\PaintballPool.cs" />
     <Compile Include="Assets\Script\PlayerShooting.cs" />
+    <Compile Include="Assets\Script\ResultManager.cs" />
     <Compile Include="Assets\Scripts\Brick.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\CharacterSelector.cs" />

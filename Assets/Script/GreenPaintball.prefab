@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4742053445217459880}
   m_Layer: 15
   m_Name: GreenPaintball
-  m_TagString: Untagged
+  m_TagString: Player1Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4773853426379829404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.20126988, y: 0.41763514, z: -0.38009107}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 85bfd08c71d86804697e163af7e7c605, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.006186962, a: 1}
+  m_Color: {r: 0.96015084, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33325f9541ae5c5479f2a7f4b254ae77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  player2Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!50 &1354577496640254073
 Rigidbody2D:
   serializedVersion: 4
@@ -114,7 +116,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 7489992bb5ac9254b8179c132e0856be, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &4742053445217459880
 CircleCollider2D:

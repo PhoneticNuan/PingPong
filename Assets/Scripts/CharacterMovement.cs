@@ -16,14 +16,14 @@ public class CharacterMovement : MonoBehaviour
         {
             if (!Physics2D.Linecast(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x, transform.position.y + 0.5f), invisibleLayer))
             {
-                transform.Translate(Vector2.up * horizontal * MoveSpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * horizontal * MoveSpeed * Time.deltaTime, Space.World);
             }
         }
         if (horizontal < 0)
         {
             if (!Physics2D.Linecast(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x, transform.position.y - 0.5f), invisibleLayer))
             {
-                transform.Translate(Vector2.up * horizontal * MoveSpeed * Time.deltaTime);
+                transform.Translate(Vector2.up * horizontal * MoveSpeed * Time.deltaTime, Space.World);
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Eccentric.Utils;
+using UnityEngine.UI;
 
 public class ScoreManager : TSingletonMonoBehavior<ScoreManager>
 {
@@ -9,9 +10,22 @@ public class ScoreManager : TSingletonMonoBehavior<ScoreManager>
 
     [SerializeField]
     private int score;
+    [SerializeField]
+    private int playerHitScore;
 
-    public void AddScore(int playerId)
+    [SerializeField]
+    private Text player1Text;
+    [SerializeField]
+    private Text player2Text;
+
+    public void AddScore(int playerId, int scoreType = 0)
     {
-        playerScore[playerId] += score;
+        if (scoreType == 0)
+            playerScore[playerId] += playerHitScore;
+        else
+            playerScore[playerId] += score;
+
+        player1Text.text = playerScore[0].ToString();
+        player2Text.text = playerScore[1].ToString();
     }
 }
