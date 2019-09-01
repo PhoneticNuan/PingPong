@@ -18,6 +18,9 @@ public class SelectManager : MonoBehaviour {
     [SerializeField] int player2Chosen = 0;
     bool bPlayer1Lock;
     bool bPlayer2Lock;
+
+    public string levelName;
+
     void Start ( ) {
         bPlayer1Lock = false;
         bPlayer2Lock = false;
@@ -56,7 +59,7 @@ public class SelectManager : MonoBehaviour {
         UpdateUI();
         if (bPlayer1Lock && bPlayer2Lock) {
             GameManager.Instance.SelectPlayer (player1Chosen, player2Chosen);
-            GameManager.Instance.LoadScene("LevelOne");
+            GameManager.Instance.LoadScene(levelName);
         }
 
     }

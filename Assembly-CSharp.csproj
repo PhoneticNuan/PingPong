@@ -73,6 +73,7 @@
     <Compile Include="Assets\Eccentric\Collections\ObjectPool.cs" />
     <Compile Include="Assets\Eccentric\Utils\Timer.cs" />
     <Compile Include="Assets\Eccentric\Utils\TSingletonMonoBehavior.cs" />
+    <Compile Include="Assets\Script\Cheat.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\Paintball.cs" />
     <Compile Include="Assets\Script\PaintballPool.cs" />

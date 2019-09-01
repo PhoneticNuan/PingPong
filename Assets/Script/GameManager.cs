@@ -67,7 +67,7 @@ public class GameManager : TSingletonMonoBehavior<GameManager>
             }
         }
 
-        if (SceneManager.GetActiveScene().name == "LevelOne")
+        if (SceneManager.GetActiveScene().name == "LevelOne" || SceneManager.GetActiveScene().name == "LevelTwo")
         {
             if (!gamePlayStart)
             {

@@ -221,9 +221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPos: {fileID: 7756671919345997497}
   shootInput: Fire1
-  shootCD: 0.5
-  ballDuration: 1.5
-  shootSpeed: 1000
+  shootCD: 0.1
+  ballDuration: 1.25
+  shootSpeed: 1200
   ballValue:
     tag: 
     duration: 0

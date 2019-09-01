@@ -32,10 +32,13 @@ public class CharacterMovement : MonoBehaviour
 
     public PlayerShooting _PlayerShooting;
 
+    public Collider2D col2D;
+
     private void Start()
     {
         dashTime = startDashTime;
         _PlayerShooting = GetComponent<PlayerShooting>();
+        col2D = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -44,6 +47,16 @@ public class CharacterMovement : MonoBehaviour
         NormalMovement();
 
         Dash();
+
+        if(transform.localScale.x <= 0.45f)
+        {
+            col2D.enabled = false;
+        }
+        else
+        {
+            if (col2D.enabled == false)
+                col2D.enabled = true;
+        }
     }
 
     private void NormalMovement()
