@@ -17,6 +17,8 @@ public class ResultManager : MonoBehaviour
     public Texture2D[] winTextures;
     public Texture2D[] winTextTextures;
 
+    private float EndTimer = 5f;
+
     private bool GameFinish = false;
     void Awake()
     {
@@ -43,8 +45,13 @@ public class ResultManager : MonoBehaviour
 
         if (GameFinish)
         {
-            if (Input.anyKeyDown)
-                GameManager.Instance.LoadScene("CharacterSelect");
+            EndTimer -= Time.deltaTime;
+
+            if (EndTimer <= 0f)
+            {
+                if (Input.anyKeyDown)
+                    GameManager.Instance.LoadScene("CharacterSelect");
+            }
         }
     }
     void GameFin()
@@ -70,6 +77,8 @@ public class ResultManager : MonoBehaviour
             Debug.Log("Gamefin winner goes to " + winner);
 
             winImage.gameObject.SetActive(true);
+
+            EndTimer = 5f;
 
             GameFinish = true;
         }

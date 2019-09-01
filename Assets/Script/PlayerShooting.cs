@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour {
     [Header ("Rotate")]
     [SerializeField] float rotateSpeed;
     public float rotateStartValue;
+    new AudioSource audio;
     #endregion
 
     CountdownTimer timer;
@@ -26,7 +27,11 @@ public class PlayerShooting : MonoBehaviour {
     public float ShootCD { get { return shootCD; } set { shootCD = value; } }
     public float ShootSpeed { get { return shootSpeed; } set { shootSpeed = value; } }
     public int NextColor { get { return nextColor; } }
+
+    public bool canShoot = true;
+
     void Start ( ) {
+        audio = GetComponent<AudioSource>();
         timer = new CountdownTimer (shootCD);
         nextColor = Random.Range (0, 3);
         InitShoot ( );
@@ -39,15 +44,24 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     void Rotate ( ) {
-        float tmp = Mathf.PingPong (Time.time * rotateSpeed, 100f) + rotateStartValue;
+        float tmp = Mathf.PingPong (Time.time * rotateSpeed, 140f) + rotateStartValue;
         this.transform.rotation = Quaternion.Euler (0f, 0f, tmp);
     }
 
     void Shoot ( ) {
-        Vector2 direction = shootPos.position - this.transform.position;
-        ballValue.force = direction.normalized * this.shootSpeed;
-        ball.Shoot (ballValue);
-        InitShoot ( );
+        if (canShoot)
+        {
+            Vector2 direction = shootPos.position - this.transform.position;
+            ballValue.force = direction.normalized * this.shootSpeed;
+            ball.Shoot(ballValue);
+            InitShoot();
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player1Ball" || collision.gameObject.tag == "Player2Ball")
+            audio.Play();
     }
 
     //ask for a bullet

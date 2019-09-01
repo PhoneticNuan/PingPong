@@ -42,15 +42,13 @@ public class GameManager : TSingletonMonoBehavior<GameManager>
         CharacterMovement p2Move = p2.GetComponent<CharacterMovement>();
         p1Move.PlayerInput = "PlayerOneMovement";
         p2Move.PlayerInput = "PlayerTwoMovement";
-        p1.transform.localScale = new Vector3(.75f, .75f, 1f);
-        p2.transform.localScale = new Vector3(.75f, .75f, 1f);
         p1.name = "Player1";
         p2.name = "Player2";
         p1.tag = "Player1";
         p2.tag = "Player2";
 
-        p1.GetComponent<PlayerShooting>().rotateStartValue = -50f;
-        p2.GetComponent<PlayerShooting>().rotateStartValue = -230f;
+        p1.GetComponent<PlayerShooting>().rotateStartValue = -70f;
+        p2.GetComponent<PlayerShooting>().rotateStartValue = -250f;
     }
     public void SelectPlayer(int player1, int player2)
     {
